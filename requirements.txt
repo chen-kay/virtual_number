@@ -1,0 +1,8 @@
+django
+djangorestframework
+mysqlclient
+lxml
+
+# format
+flake8
+yapf
