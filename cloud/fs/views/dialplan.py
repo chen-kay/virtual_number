@@ -25,7 +25,7 @@ class DialplanViews(APIView):
         except Exception as e:
             print(request.data, e)
             traceback.print_exc()
-            handle.respond(500)
+            response = handle.respond(500)
         return HttpResponse(response, content_type='text/xml')
 
     def get_real_number(self, dest):

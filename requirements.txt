@@ -3,6 +3,9 @@ djangorestframework
 mysqlclient
 lxml
 
+requests
 # format
 flake8
 yapf
+
+uwsgi

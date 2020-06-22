@@ -4,6 +4,8 @@ from django.utils.module_loading import import_string
 
 DEFAULTS = {
     'DEFAULT_GATEWAY_REAML': '192.168.10.125:5060',
+    'SIGN_URI': 'http://192.168.10.83:8983/getPhone',
+    'SIGN_KEY': '0MUy9P2xuZRLxpoAIFoil3WZAQgvwaip',
 }
 
 IMPORT_STRINGS = []
