@@ -1,4 +1,3 @@
-from cloud.fs.handle import get_call_mobile
 from cloud.fs.settings import fs_settings
 from cloud.fs.utils import encry_sign
 from freeswitch import XMLCurlFactory
@@ -22,15 +21,10 @@ class Dialplan:
         return True
 
     def generate_public_xml(self, dest):
-        mobile = get_call_mobile(dest)
-        if not mobile:
-            # 未找到
-            return self.respond(404)
-
         data = [('sys_bridge', False,
                  [('destination_number', '^(.*)$', False, [
                      ('bridge', 'sofia/external/{0}@{1}'.format(
-                         mobile, fs_settings.DEFAULT_GATEWAY_REAML), False),
+                         dest, fs_settings.DEFAULT_GATEWAY_REAML), False),
                  ])])]
         xml = Context(self.context)
         self._generate_xml(xml, data)

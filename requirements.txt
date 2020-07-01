@@ -2,6 +2,7 @@ django
 djangorestframework
 mysqlclient
 lxml
+django-redis
 
 requests
 # format
